@@ -1,0 +1,36 @@
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\LMS - Hunumulla Central Collage.exe.config
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\library_management_system_db.db
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\msvcr100.dll
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\SQLite.Interop.dll
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\LMS - Hunumulla Central Collage.exe
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\LMS - Hunumulla Central Collage.pdb
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\Bunifu_UI_v1.52.dll
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\System.Data.SQLite.dll
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\Tulpep.NotificationWindow.dll
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\zxing.dll
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\zxing.presentation.dll
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\zxing.xml
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\bin\x86\Release\zxing.presentation.xml
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.barcode_printer_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.book_view_common.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.category_setteings_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.configure_librarian_data.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.Dashboard.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.fine_calculation_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.info_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.issue_book_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.loading_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.Login_UI.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.manage_books_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.manage_users_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.Properties.Resources.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.reading_barcode_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.receive_book.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.report_generating_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.settings_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.test_view.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.user_fine_report.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS___Hunumulla_Central_Collage.user_view_common.resources
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS - Hunumulla Central Collage.csproj.GenerateResource.Cache
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS - Hunumulla Central Collage.exe
+E:\My Activities\Final Project\Software\LMS - Hunumulla Central Collage\LMS - Hunumulla Central Collage\obj\x86\Release\LMS - Hunumulla Central Collage.pdb

@@ -1,0 +1,1502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.88.2.90\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.88.2.90\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.88.2.9\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.88.2.9\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.88.2.9\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.88.2.9\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A53F752-4E7F-4A5D-B9F7-B0257C491693}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMS___Hunumulla_Central_Collage</RootNamespace>
+    <AssemblyName>LMS - Hunumulla Central Collage</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\shash\OneDrive\Desktop\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/LMS - Hunumulla Central Collage/</UpdateUrl>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Properties\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp, Version=88.2.90.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.88.2.90\lib\net452\CefSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CefSharp.BrowserSubprocess.Core, Version=88.2.90.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\New folder\CefSharp.BrowserSubprocess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=88.2.90.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.88.2.90\lib\net452\CefSharp.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=88.2.90.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.WinForms.88.2.90\lib\net452\CefSharp.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetBrowser">
+      <HintPath>D:\New folder\Library\DotNetBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Chromium.Win-x64">
+      <HintPath>D:\New folder\Library\DotNetBrowser.Chromium.Win-x64.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Chromium.Win-x86">
+      <HintPath>D:\New folder\Library\DotNetBrowser.Chromium.Win-x86.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Core">
+      <HintPath>D:\New folder\Library\DotNetBrowser.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Logging">
+      <HintPath>D:\New folder\Library\DotNetBrowser.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.WinForms">
+      <HintPath>D:\New folder\Library\DotNetBrowser.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.WinForms.Demo">
+      <HintPath>D:\New folder\Library\DotNetBrowser.WinForms.Demo.exe</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Wpf">
+      <HintPath>D:\New folder\Library\DotNetBrowser.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Wpf.Demo">
+      <HintPath>D:\New folder\Library\DotNetBrowser.Wpf.Demo.exe</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax, Version=2.2.1.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Api.Gax.2.2.1\lib\net45\Google.Api.Gax.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Api.Gax.Rest, Version=2.2.1.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Api.Gax.Rest.2.2.1\lib\net45\Google.Api.Gax.Rest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.51.0\lib\net45\Google.Apis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.51.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.51.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.51.0\lib\net45\Google.Apis.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.51.0.2265, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.51.0.2265\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.51.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.51.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Storage.v1, Version=1.32.0.1035, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Storage.v1.1.32.0.1035\lib\net45\Google.Apis.Storage.v1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Cloud.Storage.V1, Version=2.1.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Cloud.Storage.V1.2.1.0\lib\net45\Google.Cloud.Storage.V1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MimeMapping, Version=1.0.1.37, Culture=neutral, PublicKeyToken=680e2d5f226b327b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeMapping.1.0.1.37\lib\netstandard1.1\MimeMapping.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>D:\New folder\Library\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net.Reflection">
+      <HintPath>D:\New folder\Library\protobuf-net.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=18.4451.0.35, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.18.4.0.35\lib\net451\Syncfusion.Compression.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.4451.0.35, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.18.4.0.35\lib\net451\Syncfusion.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=18.4451.0.35, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.WinForms.18.4.0.35\lib\net451\Syncfusion.Pdf.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>C:\Users\shash\OneDrive\Desktop\EXE Making\SQLite Package\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.1.1\lib\net45\System.Interactive.Async.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.37.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.37\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityLogDataFetch.cs" />
+    <Compile Include="ApplicationSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationSettings.Designer.cs">
+      <DependentUpon>ApplicationSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="barcode_printer_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="barcode_printer_view.Designer.cs">
+      <DependentUpon>barcode_printer_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="book_view_common.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="book_view_common.Designer.cs">
+      <DependentUpon>book_view_common.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bot_configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bot_configuration.Designer.cs">
+      <DependentUpon>bot_configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CachingProviderBase.cs" />
+    <Compile Include="category_setteings_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="category_setteings_view.Designer.cs">
+      <DependentUpon>category_setteings_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDataFetcher.cs" />
+    <Compile Include="configure_librarian_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configure_librarian_data.Designer.cs">
+      <DependentUpon>configure_librarian_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmWithPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmWithPassword.Designer.cs">
+      <DependentUpon>ConfirmWithPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyReport.Designer.cs">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataConfiguration.Designer.cs">
+      <DependentUpon>DataConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateTimeCalculatoin.cs" />
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="uploaderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uploaderView.Designer.cs">
+      <DependentUpon>uploaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebView.Designer.cs">
+      <DependentUpon>WebView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fine_calculation_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fine_calculation_view.Designer.cs">
+      <DependentUpon>fine_calculation_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalCachingProvider.cs" />
+    <Compile Include="help_bot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="help_bot.Designer.cs">
+      <DependentUpon>help_bot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="help_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="help_view.Designer.cs">
+      <DependentUpon>help_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGlobalCachingProvider.cs" />
+    <Compile Include="info_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="info_view.Designer.cs">
+      <DependentUpon>info_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="issue_book_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issue_book_view.Designer.cs">
+      <DependentUpon>issue_book_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="library_filters.cs" />
+    <Compile Include="loading_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading_view.Designer.cs">
+      <DependentUpon>loading_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_UI.Designer.cs">
+      <DependentUpon>Login_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_books_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_books_view.Designer.cs">
+      <DependentUpon>manage_books_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_users_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_users_view.Designer.cs">
+      <DependentUpon>manage_users_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="reading_barcode_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reading_barcode_view.Designer.cs">
+      <DependentUpon>reading_barcode_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="receive_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receive_book.Designer.cs">
+      <DependentUpon>receive_book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationFormView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationFormView.Designer.cs">
+      <DependentUpon>RegistrationFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewTableGenerator.cs" />
+    <Compile Include="report_generating_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_generating_view.Designer.cs">
+      <DependentUpon>report_generating_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceStatics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceStatics.Designer.cs">
+      <DependentUpon>ResourceStatics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settings_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings_view.Designer.cs">
+      <DependentUpon>settings_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setup_data.cs" />
+    <Compile Include="SoftwareUserData.cs" />
+    <Compile Include="updateBackup.cs" />
+    <Compile Include="user_fine_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_fine_report.Designer.cs">
+      <DependentUpon>user_fine_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_view_common.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_view_common.Designer.cs">
+      <DependentUpon>user_view_common.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_botRun.cs" />
+    <Compile Include="_dataGetterSetter.cs" />
+    <EmbeddedResource Include="ApplicationSettings.resx">
+      <DependentUpon>ApplicationSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="barcode_printer_view.resx">
+      <DependentUpon>barcode_printer_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="book_view_common.resx">
+      <DependentUpon>book_view_common.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bot_configuration.resx">
+      <DependentUpon>bot_configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="category_setteings_view.resx">
+      <DependentUpon>category_setteings_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configure_librarian_data.resx">
+      <DependentUpon>configure_librarian_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmWithPassword.resx">
+      <DependentUpon>ConfirmWithPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyReport.resx">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataConfiguration.resx">
+      <DependentUpon>DataConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uploaderView.resx">
+      <DependentUpon>uploaderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebView.resx">
+      <DependentUpon>WebView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fine_calculation_view.resx">
+      <DependentUpon>fine_calculation_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="help_bot.resx">
+      <DependentUpon>help_bot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="info_view.resx">
+      <DependentUpon>info_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issue_book_view.resx">
+      <DependentUpon>issue_book_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading_view.resx">
+      <DependentUpon>loading_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_UI.resx">
+      <DependentUpon>Login_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_books_view.resx">
+      <DependentUpon>manage_books_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_users_view.resx">
+      <DependentUpon>manage_users_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reading_barcode_view.resx">
+      <DependentUpon>reading_barcode_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receive_book.resx">
+      <DependentUpon>receive_book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationFormView.resx">
+      <DependentUpon>RegistrationFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_generating_view.resx">
+      <DependentUpon>report_generating_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceStatics.resx">
+      <DependentUpon>ResourceStatics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings_view.resx">
+      <DependentUpon>settings_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_fine_report.resx">
+      <DependentUpon>user_fine_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_view_common.resx">
+      <DependentUpon>user_view_common.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="credentials.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\adsdvasa" />
+    <None Include="Data\ALTSVC.md" />
+    <None Include="Data\asddwfaadadaj" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\adsdvasa" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\asddwfaadadaj" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\adsdvasa" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\asddwfaadadaj" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dadas" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dajhdasjdk" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dasdasdsaasashn.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dewdfasdada.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sadadfacdasdas.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dadas" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dajhdasjdk" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dasdasdsaasashn.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dewdfasdada.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\adsdvasa" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\asddwfaadadaj" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dadas" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dajhdasjdk" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dasdasdsaasashn.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dewdfasdada.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\sadadfacdasdas.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\adsdvasa" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\asddwfaadadaj" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dadas" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dajhdasjdk" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dasdasdsaasashn.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dewdfasdada.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\sadadfacdasdas.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\adsdvasa" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\asddwfaadadaj" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dadas" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dajhdasjdk" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dasdasdsaasashn.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dewdfasdada.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\sadadfacdasdas.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\adsdvasa" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\asddwfaadadaj" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dadas" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dajhdasjdk" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dasdasdsaasashn.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dewdfasdada.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sadadfacdasdas.config" />
+    <None Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\sadadfacdasdas.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\adsdvasa" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\asddwfaadadaj" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\dadas" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\dajhdasjdk" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\dasdasdsaasashn.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\dewdfasdada.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\sadadfacdasdas.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\adsdvasa" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\asddwfaadadaj" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dadas" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dajhdasjdk" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dasdasdsaasashn.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dewdfasdada.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\sadadfacdasdas.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\adsdvasa" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\asddwfaadadaj" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dadas" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dajhdasjdk" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dasdasdsaasashn.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dewdfasdada.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\sadadfacdasdas.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\adsdvasa" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\asddwfaadadaj" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dadas" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dajhdasjdk" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dasdasdsaasashn.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dewdfasdada.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\sadadfacdasdas.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adsdvasa" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\asddwfaadadaj" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dadas" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dajhdasjdk" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dasdasdsaasashn.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dewdfasdada.config" />
+    <None Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sadadfacdasdas.config" />
+    <None Include="Data\BINDINGS.md" />
+    <None Include="Data\BUG-BOUNTY.md" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\adsdvasa" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\asddwfaadadaj" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dadas" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dajhdasjdk" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dasdasdsaasashn.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dewdfasdada.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\adsdvasa" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\asddwfaadadaj" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dadas" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dajhdasjdk" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dasdasdsaasashn.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dewdfasdada.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sadadfacdasdas.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\adsdvasa" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\asddwfaadadaj" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dadas" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dajhdasjdk" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dasdasdsaasashn.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dewdfasdada.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\sadadfacdasdas.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\adsdvasa" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\asddwfaadadaj" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dadas" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dajhdasjdk" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dasdasdsaasashn.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dewdfasdada.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\sadadfacdasdas.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sadadfacdasdas.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\adsdvasa" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\asddwfaadadaj" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dadas" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dajhdasjdk" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dasdasdsaasashn.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dewdfasdada.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\sadadfacdasdas.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\adsdvasa" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\asddwfaadadaj" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dadas" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dajhdasjdk" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dasdasdsaasashn.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dewdfasdada.config" />
+    <None Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\sadadfacdasdas.config" />
+    <None Include="Data\CHECKSRC.md" />
+    <None Include="Data\CIPHERS.md" />
+    <None Include="Data\CODE_OF_CONDUCT.md" />
+    <None Include="Data\CODE_REVIEW.md" />
+    <None Include="Data\CODE_STYLE.md" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\adsdvasa" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\asddwfaadadaj" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\adsdvasa" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\asddwfaadadaj" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dadas" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dajhdasjdk" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dewdfasdada.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sadadfacdasdas.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dadas" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dajhdasjdk" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dewdfasdada.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\adsdvasa" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\asddwfaadadaj" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dadas" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dajhdasjdk" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dewdfasdada.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\sadadfacdasdas.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\adsdvasa" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\asddwfaadadaj" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dadas" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dajhdasjdk" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dewdfasdada.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\sadadfacdasdas.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\adsdvasa" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\asddwfaadadaj" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dadas" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dajhdasjdk" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dewdfasdada.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\sadadfacdasdas.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\adsdvasa" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\asddwfaadadaj" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dadas" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dajhdasjdk" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dewdfasdada.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sadadfacdasdas.config" />
+    <None Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\sadadfacdasdas.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\adsdvasa" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\asddwfaadadaj" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\dadas" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\dajhdasjdk" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\dasdasdsaasashn.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\dewdfasdada.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\sadadfacdasdas.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\adsdvasa" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\asddwfaadadaj" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dadas" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dajhdasjdk" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dasdasdsaasashn.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dewdfasdada.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\sadadfacdasdas.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\adsdvasa" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\asddwfaadadaj" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dadas" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dajhdasjdk" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dasdasdsaasashn.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dewdfasdada.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\sadadfacdasdas.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\adsdvasa" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\asddwfaadadaj" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dadas" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dajhdasjdk" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dasdasdsaasashn.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dewdfasdada.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\sadadfacdasdas.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adsdvasa" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\asddwfaadadaj" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dadas" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dajhdasjdk" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dasdasdsaasashn.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dewdfasdada.config" />
+    <None Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sadadfacdasdas.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\adsdvasa" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\asddwfaadadaj" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dadas" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dajhdasjdk" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dewdfasdada.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\adsdvasa" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\asddwfaadadaj" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dadas" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dajhdasjdk" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dewdfasdada.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sadadfacdasdas.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\adsdvasa" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\asddwfaadadaj" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dadas" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dajhdasjdk" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dewdfasdada.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\sadadfacdasdas.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\adsdvasa" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\asddwfaadadaj" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dadas" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dajhdasjdk" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dewdfasdada.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\sadadfacdasdas.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sadadfacdasdas.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\adsdvasa" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\asddwfaadadaj" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dadas" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dajhdasjdk" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dewdfasdada.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\sadadfacdasdas.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\adsdvasa" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\asddwfaadadaj" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dadas" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dajhdasjdk" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dasdasdsaasashn.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dewdfasdada.config" />
+    <None Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\sadadfacdasdas.config" />
+    <None Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\adsdvasa" />
+    <None Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\asddwfaadadaj" />
+    <None Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\dadas" />
+    <None Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\dajhdasjdk" />
+    <None Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\dasdasdsaasashn.config" />
+    <None Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\dewdfasdada.config" />
+    <None Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\sadadfacdasdas.config" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adasdvaddasdava" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adgasubnn" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adsdvasa" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\asddwfaadadaj" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dadas" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dajhdasjdk" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dasdasdsaasashn.config" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dewdfasdada.config" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sadadfacdasdas.config" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsafafe" />
+    <None Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsda.bat" />
+    <None Include="Data\CONTRIBUTE.md" />
+    <None Include="Data\CURL-DISABLE.md" />
+    <None Include="Data\dadas" />
+    <None Include="Data\dajhdasjdk" />
+    <None Include="Data\dasdasdsaasashn.config" />
+    <None Include="Data\DEPRECATE.md" />
+    <None Include="Data\dewdfasdada.config" />
+    <None Include="Data\DYNBUF.md" />
+    <None Include="Data\ESNI.md" />
+    <None Include="Data\EXPERIMENTAL.md" />
+    <None Include="Data\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\adsdvasa" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\asddwfaadadaj" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\adsdvasa" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\asddwfaadadaj" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dadas" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dajhdasjdk" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dewdfasdada.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dadas" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dajhdasjdk" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dewdfasdada.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\adsdvasa" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\asddwfaadadaj" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dadas" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dajhdasjdk" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dewdfasdada.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\adsdvasa" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\asddwfaadadaj" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dadas" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dajhdasjdk" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dewdfasdada.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\adsdvasa" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\asddwfaadadaj" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dadas" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dajhdasjdk" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dewdfasdada.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\adsdvasa" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\asddwfaadadaj" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dadas" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dajhdasjdk" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dewdfasdada.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\sadadfacdasdas.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\adsdvasa" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\asddwfaadadaj" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\dadas" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\dajhdasjdk" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\dewdfasdada.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\sadadfacdasdas.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\adsdvasa" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\asddwfaadadaj" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dadas" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dajhdasjdk" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dewdfasdada.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\sadadfacdasdas.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\adsdvasa" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\asddwfaadadaj" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dadas" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dajhdasjdk" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dewdfasdada.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\sadadfacdasdas.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\adsdvasa" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\asddwfaadadaj" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dadas" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dajhdasjdk" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dewdfasdada.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\sadadfacdasdas.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adsdvasa" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\asddwfaadadaj" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dadas" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dajhdasjdk" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dewdfasdada.config" />
+    <None Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\adsdvasa" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\asddwfaadadaj" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dadas" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dajhdasjdk" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dewdfasdada.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\adsdvasa" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\asddwfaadadaj" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dadas" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dajhdasjdk" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dewdfasdada.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\adsdvasa" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\asddwfaadadaj" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dadas" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dajhdasjdk" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dewdfasdada.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\adsdvasa" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\asddwfaadadaj" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dadas" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dajhdasjdk" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dewdfasdada.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\adsdvasa" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\asddwfaadadaj" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dadas" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dajhdasjdk" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dewdfasdada.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\sadadfacdasdas.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\adsdvasa" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\asddwfaadadaj" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dadas" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dajhdasjdk" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dewdfasdada.config" />
+    <None Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\sadadfacdasdas.config" />
+    <None Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\adsdvasa" />
+    <None Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\asddwfaadadaj" />
+    <None Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\dadas" />
+    <None Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\dajhdasjdk" />
+    <None Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\dewdfasdada.config" />
+    <None Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\sadadfacdasdas.config" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adasdvaddasdava" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adgasubnn" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adsdvasa" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\asddwfaadadaj" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dadas" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dajhdasjdk" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dasdasdsaasashn.config" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dewdfasdada.config" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sadadfacdasdas.config" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsafafe" />
+    <None Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsda.bat" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\adadwa.db" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\adsdvasa" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\asddwfaadadaj" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\adsdvasa" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\asddwfaadadaj" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dadas" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dajhdasjdk" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dewdfasdada.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dadas.db" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dadawdwada.db" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dajhdasjdk" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dewdfasdada.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\adsdvasa" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\asddwfaadadaj" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dadas" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dajhdasjdk" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\dewdfasdada.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\eafasde.db" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\fasdafawdws.db" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\adsdvasa" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\asddwfaadadaj" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dadas" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dajhdasjdk" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\dewdfasdada.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\adsdvasa" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\asddwfaadadaj" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dadas" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dajhdasjdk" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\dewdfasdada.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\adsdvasa" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\asddwfaadadaj" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dadas" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dajhdasjdk" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dewdfasdada.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\wdadfefbsrftrs.db" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\adsdvasa" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\asddwfaadadaj" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\dadas" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\dajhdasjdk" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\dewdfasdada.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\sadadfacdasdas.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\adsdvasa" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\asddwfaadadaj" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dadas" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dajhdasjdk" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\dewdfasdada.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\sadadfacdasdas.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\adsdvasa" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\asddwfaadadaj" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dadas" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dajhdasjdk" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\dewdfasdada.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\sadadfacdasdas.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\adsdvasa" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\asddwfaadadaj" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dadas" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dajhdasjdk" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\dewdfasdada.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\sadadfacdasdas.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adsdvasa" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\asddwfaadadaj" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dadas" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dajhdasjdk" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dewdfasdada.config" />
+    <None Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\adsdvasa" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\asddwfaadadaj" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dadas" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dajhdasjdk" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\dewdfasdada.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\adsdvasa" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\asddwfaadadaj" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dadas" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dajhdasjdk" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\dewdfasdada.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\adsdvasa" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\asddwfaadadaj" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dadas" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dajhdasjdk" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\dewdfasdada.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\adsdvasa" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\asddwfaadadaj" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dadas" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dajhdasjdk" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\dewdfasdada.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\adsdvasa" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\asddwfaadadaj" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dadas" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dajhdasjdk" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\dewdfasdada.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\sadadfacdasdas.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\adsdvasa" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\asddwfaadadaj" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dadas" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dajhdasjdk" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\dewdfasdada.config" />
+    <None Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\sadadfacdasdas.config" />
+    <None Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\adsdvasa" />
+    <None Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\asddwfaadadaj" />
+    <None Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\dadas" />
+    <None Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\dajhdasjdk" />
+    <None Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\dewdfasdada.config" />
+    <None Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\sadadfacdasdas.config" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adasdvaddasdava" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adgasubnn" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adsdvasa" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\asddwfaadadaj" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dadas" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dajhdasjdk" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dasdasdsaasashn.config" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dewdfasdada.config" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sadadfacdasdas.config" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsafafe" />
+    <None Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsda.bat" />
+    <None Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\adsdvasa" />
+    <None Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\asddwfaadadaj" />
+    <None Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\dadas" />
+    <None Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\dajhdasjdk" />
+    <None Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\dasdasdsaasashn.config" />
+    <None Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\dewdfasdada.config" />
+    <None Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\sadadfacdasdas.config" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adasdvaddasdava" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adgasubnn" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\adsdvasa" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\asddwfaadadaj" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dadas" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dajhdasjdk" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dasdasdsaasashn.config" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\dewdfasdada.config" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sadadfacdasdas.config" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsafafe" />
+    <None Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsda.bat" />
+    <None Include="laptrinhvb-c96be-85eeda1f6d54.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="laptrinhvb-c96be-e4ea5c001fd4.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="library_management_system_db.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\close.png" />
+    <None Include="icons\minimize%402x.png" />
+    <None Include="icons\option.png" />
+    <None Include="icons\maximize.png" />
+    <None Include="icons\logo.png" />
+    <None Include="icons\Information.png" />
+    <None Include="icons\add student.png" />
+    <None Include="icons\add book.png" />
+    <None Include="icons\issue.png" />
+    <None Include="icons\receive_book.png" />
+    <None Include="icons\user.png" />
+    <None Include="icons\books.png" />
+    <None Include="icons\report.png" />
+    <None Include="icons\statistics.png" />
+    <None Include="icons\info.png" />
+    <None Include="icons\privacy.png" />
+    <None Include="icons\web.png" />
+    <None Include="icons\help.png" />
+    <None Include="icons\icon.ico" />
+    <None Include="icons\dashboard.png" />
+    <None Include="icons\search.png" />
+    <None Include="icons\add_user.png" />
+    <None Include="icons\edit_user.png" />
+    <None Include="icons\accounting.png" />
+    <None Include="icons\close_small.png" />
+    <None Include="icons\setting.png" />
+    <None Include="icons\reload.png" />
+    <None Include="icons\animation.gif" />
+    <None Include="icons\animation02.gif" />
+    <None Include="icons\animation03.gif" />
+    <None Include="icons\edit_book.png" />
+    <None Include="icons\animation04.gif" />
+    <None Include="icons\category.png" />
+    <None Include="icons\loading_animation_1.gif" />
+    <None Include="icons\loading_animation.gif" />
+    <None Include="icons\student_icon.png" />
+    <None Include="icons\teacher_icon.png" />
+    <None Include="icons\non_ac_icon.png" />
+    <None Include="icons\configure.png" />
+    <None Include="icons\configure1.png" />
+    <None Include="icons\warning.png" />
+    <None Include="bin\Debug\icons\loading.gif" />
+    <None Include="bin\Debug\icons\hide-24.png" />
+    <None Include="bin\Debug\icons\configuration.png" />
+    <None Include="bin\Debug\icons\accounting.png" />
+    <None Include="bin\Debug\icons\com-ico.png" />
+    <None Include="bin\Debug\icons\icons8-back-26.png" />
+    <None Include="bin\Debug\icons\icons8-back-arrow-52.png" />
+    <None Include="bin\Debug\icons\icons8-forward-button-26.png" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\fsdsa.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sdadsadwed.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\fsdsa.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\sdadsadwed.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\fsdsa.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\fsdsa.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\sdadsadwed.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\fsdsa.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\sdadsadwed.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\fsdsa.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sdadsadwed.dll" />
+    <Content Include="Data\BGYGdahsvahbasjdanskdjnasidksandikdniask\sdadsadwed.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\fsdsa.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\sdadsadwed.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\fsdsa.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\sdadsadwed.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\fsdsa.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\sdadsadwed.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\fsdsa.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\sdadsadwed.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\fsdsa.dll" />
+    <Content Include="Data\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsadwed.dll" />
+    <Content Include="Data\BUGS.txt" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\fsdsa.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\fsdsa.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sdadsadwed.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\fsdsa.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\sdadsadwed.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\fsdsa.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\sdadsadwed.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sdadsadwed.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\fsdsa.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\sdadsadwed.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\fsdsa.dll" />
+    <Content Include="Data\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\sdadsadwed.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\fsdsa.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sdadsadwed.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\fsdsa.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\sdadsadwed.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\fsdsa.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\fsdsa.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\sdadsadwed.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\fsdsa.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\sdadsadwed.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\fsdsa.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sdadsadwed.dll" />
+    <Content Include="Data\Config\BGYGdahsvahbasjdanskdjnasidksandikdniask\sdadsadwed.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\fsdsa.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\sdadsadwed.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\fsdsa.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\sdadsadwed.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\fsdsa.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\sdadsadwed.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\fsdsa.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\sdadsadwed.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\fsdsa.dll" />
+    <Content Include="Data\Config\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsadwed.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\fsdsa.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\fsdsa.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sdadsadwed.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\fsdsa.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\sdadsadwed.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\fsdsa.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\sdadsadwed.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sdadsadwed.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\fsdsa.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\sdadsadwed.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\fsdsa.dll" />
+    <Content Include="Data\Config\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\sdadsadwed.dll" />
+    <Content Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\fsdsa.dll" />
+    <Content Include="Data\Config\VJKdbadjasdbacdasdkbajcsdaasdbajda\sdadsadwed.dll" />
+    <Content Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\fsdsa.dll" />
+    <Content Include="Data\Config\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsadwed.dll" />
+    <Content Include="Data\fines.txt" />
+    <Content Include="Data\fsdsa.dll" />
+    <Content Include="Data\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\fsdsa.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\fsdsa.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\fsdsa.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\fsdsa.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\fsdsa.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\fsdsa.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BGYGdahsvahbasjdanskdjnasidksandikdniask\sdadsadwed.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\fsdsa.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\sdadsadwed.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\fsdsa.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\sdadsadwed.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\fsdsa.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\sdadsadwed.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\fsdsa.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\sdadsadwed.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\fsdsa.dll" />
+    <Content Include="Data\Settings\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\fsdsa.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\fsdsa.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\fsdsa.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\fsdsa.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\fsdsa.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\sdadsadwed.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\fsdsa.dll" />
+    <Content Include="Data\Settings\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\sdadsadwed.dll" />
+    <Content Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\fsdsa.dll" />
+    <Content Include="Data\Settings\VJKdbadjasdbacdasdkbajcsdaasdbajda\sdadsadwed.dll" />
+    <Content Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\fsdsa.dll" />
+    <Content Include="Data\Settings\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsadwed.dll" />
+    <EmbeddedResource Include="Data\sys-data.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\fsdsa.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\fsdsa.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\dyyUHbsdushhijbiaonsiandiasdjioadnas\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\fsdsa.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\fsdsa.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\FTFdyabcjabasikdnasoidkjasmdasdmasl\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\fsdsa.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\gadbaduacUIHNddasdbhacdadbassakjb\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\fsdsa.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BGYGdahsvahbasjdanskdjnasidksandikdniask\sdadsadwed.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\fsdsa.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\sdadsadwed.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\fsdsa.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\udhasduasudhasiodhasdhasiodkjahodiksaj\sdadsadwed.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\fsdsa.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\ujvbsjdboaksniadnasodsnascobasiaksncs\sdadsadwed.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\fsdsa.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\VJKdbadjasdbacdasdkbajcsdaasdbajda\sdadsadwed.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\fsdsa.dll" />
+    <Content Include="Data\Temp\Biahscioncasncsaonasbcdasbdacbasoi\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\fsdsa.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\fsdsa.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\fsdsa.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\Gndndauhassdkkasdknajkasdbajkdnajk\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\fsdsa.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\fsdsa.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udbauisnoidjadacojandaadjandapdnasodaod\sdadsadwed.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\fsdsa.dll" />
+    <Content Include="Data\Temp\BVFYUDefhsifhdifsofhnsdofsfisdhfso\udhasduasudhasiodhasdhasiodkjahodiksaj\sdadsadwed.dll" />
+    <Content Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\fsdsa.dll" />
+    <Content Include="Data\Temp\VJKdbadjasdbacdasdkbajcsdaasdbajda\sdadsadwed.dll" />
+    <Content Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\fsdsa.dll" />
+    <Content Include="Data\Temp\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsadwed.dll" />
+    <Content Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\fsdsa.dll" />
+    <Content Include="Data\VJKdbadjasdbacdasdkbajcsdaasdbajda\sdadsadwed.dll" />
+    <Content Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\fsdsa.dll" />
+    <Content Include="Data\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\sdadsadwed.dll" />
+    <Content Include="Data\_sys-data.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="icons\robot.png" />
+    <None Include="icons\bot.png" />
+    <None Include="icons\win-cup.png" />
+    <None Include="icons\print.png" />
+    <None Include="icons\helpp.png" />
+    <None Include="icons\full-screen-24.png" />
+    <Content Include="msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Notification Icon.bmp" />
+    <None Include="Resources\AcademicDefensiveArgentinehornedfrog-max-1mb.gif" />
+    <None Include="Resources\DentalFalseAuk-max-1mb.gif" />
+    <None Include="Resources\DentalFalseAuk-max-1mb1.gif" />
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\Group-Children-Reading-2mcbfzj.jpg" />
+    <None Include="Resources\icons8-book-reading-100.png" />
+    <None Include="Resources\wallpapersden.com_blue-glowing-4k-line_1336x768.jpg" />
+    <None Include="Resources\giphy %281%29.gif" />
+    <None Include="Resources\giphy %282%29.gif" />
+    <None Include="Resources\giphy.gif" />
+    <Content Include="SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\bdbaobasoinaionniasnacnsaopnasonsc\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\" />
+    <Folder Include="Data\bdbaobasoinaionniasnacnsaopnasonsc\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\bdbaobasoinaionniasnacnsaopnasonsc\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\bdbaobasoinaionniasnacnsaopnasonsc\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\bdbaobasoinaionniasnacnsaopnasonsc\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\bdbaobasoinaionniasnacnsaopnasonsc\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\bdbaobasoinaionniasnacnsaopnasonsc\VJKdbadjasdbacdasdkbajcsdaasdbajda\" />
+    <Folder Include="Data\bdbaobasoinaionniasnacnsaopnasonsc\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\" />
+    <Folder Include="Data\Config\bdbaobasoinaionniasnacnsaopnasonsc\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\" />
+    <Folder Include="Data\Config\bdbaobasoinaionniasnacnsaopnasonsc\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Config\bdbaobasoinaionniasnacnsaopnasonsc\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Config\bdbaobasoinaionniasnacnsaopnasonsc\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Config\bdbaobasoinaionniasnacnsaopnasonsc\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Config\bdbaobasoinaionniasnacnsaopnasonsc\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\Config\bdbaobasoinaionniasnacnsaopnasonsc\VJKdbadjasdbacdasdkbajcsdaasdbajda\" />
+    <Folder Include="Data\Config\bdbaobasoinaionniasnacnsaopnasonsc\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\" />
+    <Folder Include="Data\Config\dyyUHbsdushhijbiaonsiandiasdjioadnas\BVFYUDefhsifhdifsofhnsdofsfisdhfso\" />
+    <Folder Include="Data\Config\dyyUHbsdushhijbiaonsiandiasdjioadnas\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Config\dyyUHbsdushhijbiaonsiandiasdjioadnas\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Config\dyyUHbsdushhijbiaonsiandiasdjioadnas\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Config\dyyUHbsdushhijbiaonsiandiasdjioadnas\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Config\dyyUHbsdushhijbiaonsiandiasdjioadnas\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\Config\dyyUHbsdushhijbiaonsiandiasdjioadnas\VJKdbadjasdbacdasdkbajcsdaasdbajda\" />
+    <Folder Include="Data\Config\dyyUHbsdushhijbiaonsiandiasdjioadnas\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\" />
+    <Folder Include="Data\Config\FTFdyabcjabasikdnasoidkjasmdasdmasl\" />
+    <Folder Include="Data\Config\gadbaduacUIHNddasdbhacdadbassakjb\" />
+    <Folder Include="Data\Config\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\" />
+    <Folder Include="Data\Config\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Config\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Config\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Config\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Config\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\DBDirect\" />
+    <Folder Include="Data\dyyUHbsdushhijbiaonsiandiasdjioadnas\BVFYUDefhsifhdifsofhnsdofsfisdhfso\" />
+    <Folder Include="Data\dyyUHbsdushhijbiaonsiandiasdjioadnas\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\dyyUHbsdushhijbiaonsiandiasdjioadnas\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\dyyUHbsdushhijbiaonsiandiasdjioadnas\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\dyyUHbsdushhijbiaonsiandiasdjioadnas\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\dyyUHbsdushhijbiaonsiandiasdjioadnas\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\dyyUHbsdushhijbiaonsiandiasdjioadnas\VJKdbadjasdbacdasdkbajcsdaasdbajda\" />
+    <Folder Include="Data\dyyUHbsdushhijbiaonsiandiasdjioadnas\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\" />
+    <Folder Include="Data\fileDirec\" />
+    <Folder Include="Data\FTFdyabcjabasikdnasoidkjasmdasdmasl\" />
+    <Folder Include="Data\gadbaduacUIHNddasdbhacdadbassakjb\" />
+    <Folder Include="Data\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\" />
+    <Folder Include="Data\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Settings\bdbaobasoinaionniasnacnsaopnasonsc\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\" />
+    <Folder Include="Data\Settings\bdbaobasoinaionniasnacnsaopnasonsc\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Settings\bdbaobasoinaionniasnacnsaopnasonsc\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Settings\bdbaobasoinaionniasnacnsaopnasonsc\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Settings\bdbaobasoinaionniasnacnsaopnasonsc\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Settings\bdbaobasoinaionniasnacnsaopnasonsc\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\Settings\bdbaobasoinaionniasnacnsaopnasonsc\VJKdbadjasdbacdasdkbajcsdaasdbajda\" />
+    <Folder Include="Data\Settings\bdbaobasoinaionniasnacnsaopnasonsc\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\" />
+    <Folder Include="Data\Settings\dyyUHbsdushhijbiaonsiandiasdjioadnas\BVFYUDefhsifhdifsofhnsdofsfisdhfso\" />
+    <Folder Include="Data\Settings\dyyUHbsdushhijbiaonsiandiasdjioadnas\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Settings\dyyUHbsdushhijbiaonsiandiasdjioadnas\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Settings\dyyUHbsdushhijbiaonsiandiasdjioadnas\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Settings\dyyUHbsdushhijbiaonsiandiasdjioadnas\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Settings\dyyUHbsdushhijbiaonsiandiasdjioadnas\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\Settings\dyyUHbsdushhijbiaonsiandiasdjioadnas\VJKdbadjasdbacdasdkbajcsdaasdbajda\" />
+    <Folder Include="Data\Settings\dyyUHbsdushhijbiaonsiandiasdjioadnas\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\" />
+    <Folder Include="Data\Settings\FTFdyabcjabasikdnasoidkjasmdasdmasl\" />
+    <Folder Include="Data\Settings\gadbaduacUIHNddasdbhacdadbassakjb\" />
+    <Folder Include="Data\Settings\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\" />
+    <Folder Include="Data\Settings\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Settings\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Settings\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Settings\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Settings\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\Temp\bdbaobasoinaionniasnacnsaopnasonsc\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\" />
+    <Folder Include="Data\Temp\bdbaobasoinaionniasnacnsaopnasonsc\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Temp\bdbaobasoinaionniasnacnsaopnasonsc\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Temp\bdbaobasoinaionniasnacnsaopnasonsc\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Temp\bdbaobasoinaionniasnacnsaopnasonsc\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Temp\bdbaobasoinaionniasnacnsaopnasonsc\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\Temp\bdbaobasoinaionniasnacnsaopnasonsc\VJKdbadjasdbacdasdkbajcsdaasdbajda\" />
+    <Folder Include="Data\Temp\bdbaobasoinaionniasnacnsaopnasonsc\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\" />
+    <Folder Include="Data\Temp\dyyUHbsdushhijbiaonsiandiasdjioadnas\BVFYUDefhsifhdifsofhnsdofsfisdhfso\" />
+    <Folder Include="Data\Temp\dyyUHbsdushhijbiaonsiandiasdjioadnas\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Temp\dyyUHbsdushhijbiaonsiandiasdjioadnas\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Temp\dyyUHbsdushhijbiaonsiandiasdjioadnas\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Temp\dyyUHbsdushhijbiaonsiandiasdjioadnas\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Temp\dyyUHbsdushhijbiaonsiandiasdjioadnas\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\Temp\dyyUHbsdushhijbiaonsiandiasdjioadnas\VJKdbadjasdbacdasdkbajcsdaasdbajda\" />
+    <Folder Include="Data\Temp\dyyUHbsdushhijbiaonsiandiasdjioadnas\yasgdsgaduasdbjasbsadjbaisjdbadjbaosd\" />
+    <Folder Include="Data\Temp\FTFdyabcjabasikdnasoidkjasmdasdmasl\" />
+    <Folder Include="Data\Temp\gadbaduacUIHNddasdbhacdadbassakjb\" />
+    <Folder Include="Data\Temp\GGFGDVDUhidsdasdnbadabsibcaiohsdoas\" />
+    <Folder Include="Data\Temp\Gndndauhassdkkasdknajkasdbajkdnajk\" />
+    <Folder Include="Data\Temp\hdnbsdbKNjkocasmasnjlacnadvadjcbajca\" />
+    <Folder Include="Data\Temp\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\Temp\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\Temp\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="Data\udbauisnoidjadacojandaadjandapdnasodaod\" />
+    <Folder Include="Data\udhasduasudhasiodhasdhasiodkjahodiksaj\" />
+    <Folder Include="Data\ujvbsjdboaksniadnasodsnascobasiaksncs\" />
+    <Folder Include="system\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.88.2.9\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.88.2.9\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.88.2.9\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.88.2.9\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.88.2.90\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.88.2.90\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.88.2.90\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.88.2.90\build\CefSharp.Common.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.88.2.90\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.88.2.90\build\CefSharp.Common.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
